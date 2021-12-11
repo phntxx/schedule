@@ -7,6 +7,7 @@ import useFetch from './lib/useFetch';
 import { Clock } from './components/clock';
 import { Select } from './components/select';
 import { EventList } from './components/event';
+import { Upcoming } from './components/upcoming';
 
 const AppContainer = styled.div`
 padding: 1rem;
@@ -48,6 +49,7 @@ const App = () => {
     <AppContainer>
       <Container>
         <Select useDate={useDate} />
+        <Upcoming sessions={sessionData} useDate={useDate} />
         <Clock useDate={useDate} />
       </Container>
       <EventList sessions={sessionData} useDate={useDate} />

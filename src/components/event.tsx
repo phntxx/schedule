@@ -38,7 +38,6 @@ export const Event = ({ session, useDate }: IEventProps) => {
   const [time, setTime] = useState<DateTime>(session.date)
 
   useEffect(() => {
-    console.log(`[Event-${session.number}] Updating time!`)
     setTime(oldTime => oldTime.setZone(useDate.timezone))
   }, [useDate.timezone, session.number])
 

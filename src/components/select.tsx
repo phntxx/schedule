@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { options, IOptionProps } from '../constants';
 import { IUseDateProps } from '../lib/useDate';
 
-
 const Selector = styled.select`
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -30,12 +29,12 @@ export const Select = ({ useDate }: ISelectProps) => {
   }
 
   return (
-    <Selector onChange={(e) => onChange(e)}>
+<Selector onChange={(e) => onChange(e)}>
 
-      { options.map(({ key, value }: IOptionProps) => (
-        <option key={`option-${key.toLowerCase()}`} value={value}>{key}</option>
-      ))}
+{ options.map(({ key, value }: IOptionProps) => (
+  <option key={`option-${key.toLowerCase()}`} value={value}>{key}</option>
+))}
 
-    </Selector>
+</Selector>
   )
 }

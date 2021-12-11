@@ -20,6 +20,13 @@ export interface ISessionDataProps {
   abstract: string;
 }
 
+export const compare = (a: ISessionProps, b: ISessionProps) => {
+  let compare = a.date.toSeconds() - b.date.toSeconds();
+  if (compare > 0) return 1
+  if (compare < 0) return -1
+  return 0
+}
+
 export const handleResponse = (response: Response) => {
   if (response.ok) {
     console.log(response.text());
@@ -51,6 +58,8 @@ const useFetch = () => {
           
           setSessionData(data => [...data, session]);
         })
+
+        setSessionData(data => data.sort(compare))
       }
     })
   }, []);

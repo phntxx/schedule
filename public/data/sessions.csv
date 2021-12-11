@@ -1,4 +1,4 @@
 date;number;title;speaker;abstract
 2021-07-18 18:00:00 +0000;1;This is an example;Mr. Example;This example demonstrates how this can be done.
 2021-07-18 18:45:00 +0000;2;This is another example;Mr. Burton;Butterfly in the sky, I can be twice as high. Take a look, it's in a book, the reading rainbow...
-2021-07-18 19:00:00 +0000;3;This is a final example;Mr. Hikari;Why Mega Man Battle Network is underrated.
+2021-07-18 19:00:00 +0200;3;This is a final example;Mr. Test;Why Mega Man Battle Network is underrated.
